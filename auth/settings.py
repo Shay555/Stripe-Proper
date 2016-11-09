@@ -135,5 +135,5 @@ AUTHENTICATION_BACKENDS = (
 )
 
 
-STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'publishable key')
-STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'secret key')
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_DUxklapdPJcexaEDRghwgRXL')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_S3EoDLaati4950ns1DpwIcfB')
