@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
     'hello',
-    'accounts'
+    'accounts',
+    'paypal_store',
+    'products',
+    'paypal.standard.ipn'
 ]
 
 MIDDLEWARE = [
@@ -137,3 +140,10 @@ AUTHENTICATION_BACKENDS = (
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_DUxklapdPJcexaEDRghwgRXL')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_S3EoDLaati4950ns1DpwIcfB')
+
+
+# Paypal settings
+
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'seamus_woods-facilitator@live.ie'
