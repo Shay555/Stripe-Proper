@@ -24,10 +24,10 @@
                 <tr>
                     <td>{{ product.name }}</td>
                     <td>{{ product.description }}</td>
-                    <td>{{ product.price }}</td>
+                    <td>${{ product.price }}</td>
                     <td>{{ product.paypal_form.sandbox }}</td>
                 </tr>
-                {% endfor %}
+            {% endfor %}
         </tbody>
     </table>
 

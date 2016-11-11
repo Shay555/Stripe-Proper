@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     'accounts',
     'paypal_store',
     'products',
-    'paypal.standard.ipn'
-]
+    'paypal.standard.ipn',
+    'magazines',
+
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -145,5 +147,9 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_S3EoDLaati4950ns1DpwIcfB')
 # Paypal settings
 
 SITE_URL = 'http://127.0.0.1:8000'
-PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_NOTIFY_URL = 'http://20b0bb4a.ngrok.io/a-very-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'seamus_woods-facilitator@live.ie'
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

@@ -12,8 +12,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
     {% block head_js %}{% endblock %}
+
+
+<style>
+    body {
+        background-color: black;
+    }
+    header {
+        text-align: center;
+    }
+
+    .clive {
+        color: red;
+    }
+    ul {
+        color: yellow;
+        font-size: 20px;
+    }
+    .herb {
+        color: green;
+        font-size: 30px;
+    }
+    img {
+        height: 200px;
+        width: 200px;
+        float: left;
+    }
+
+</style>
 </head>
 <body>
+
+<header>
+    <h1 class="clive">Welcome to Clive's Stoners paradise</h1>
+</header>
+
+
+
 <div class="container">
    <div class="masthead">
        <ul class="nav nav-pills pull-right">
@@ -21,6 +56,7 @@
             <li><a href="/pages/about/">About</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="/products/">Products</a> </li>
+            <li><a href="/magazines/">Magazines</a></li>
             {% if user.is_authenticated %}
                 <li><a href="{% url 'profile' %}">Profile</a></li>
                 <li><a href="{% url 'logout' %}">Log Out</a></li>
@@ -38,6 +74,7 @@
                 {% for message in messages %}
                     {{ message }}
                 {% endfor %}
+
             </div>
         </div>
     {% endif %}
@@ -46,6 +83,16 @@
    <div class="container">
        {% block content %}
        {% endblock %}
+   <div class="float">
+   <div>
+        <img src="">
+       <ul>
+   <li><p class="info">Hi folks, yes its me, Clive Cullen (aka the biggest dealer on the north side of Dublin).
+       <li>After several requests from all my users / addict friends, I've now decided to take my business to the next stage and make available my products to the world </li>
+           <li> Make sure ye check out my great selection of streams and great magazines from the menu bar above</li>
+           </ul>
+   <p class="herb">Remember guys, LEGALISE THE HERB</p>
+   </div></div>
    </div>
    <hr>
    <div class="footer">

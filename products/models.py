@@ -15,6 +15,7 @@ class Product(models.Model):
 
 
 
+
     @property
     def paypal_form(self):
         paypal_dict = {
@@ -28,7 +29,7 @@ class Product(models.Model):
             "cancel_return": "%s/paypal-cancel" % settings.SITE_URL,
         }
 
-        return PaypalPaymentsForm(initial=paypal_dict)
+        return PayPalPaymentsForm(initial=paypal_dict)
 
     def __unicode__(self):
         return self.name

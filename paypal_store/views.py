@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 @csrf_exempt
-def paypal_returns(request):
+def paypal_return(request):
     args = {'post': request.POST, 'get':request.GET}
     return render(request, 'paypal/paypal_return.html', args)
 
